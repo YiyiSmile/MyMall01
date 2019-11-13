@@ -1,6 +1,7 @@
 package indi.tom.mymall01.user.mapper;
 
-import indi.tom.mymall01.user.bean.UserInfo;
+
+import indi.tom.mymall01.bean.UserInfo;
 import tk.mybatis.mapper.common.Mapper;
 
 /**

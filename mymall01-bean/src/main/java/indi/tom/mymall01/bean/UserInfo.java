@@ -1,4 +1,4 @@
-package indi.tom.mymall01.user.bean;
+package indi.tom.mymall01.bean;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -8,6 +8,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.io.Serializable;
+
 
 /**
  * @Author Tom

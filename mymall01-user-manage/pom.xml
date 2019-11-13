@@ -3,12 +3,10 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.5.10.RELEASE</version>
-        <relativePath/> <!-- lookup parent from repository -->
-
-
+        <artifactId>mymall01-parent</artifactId>
+        <groupId>indi.tom.mymall01</groupId>
+        <version>1.0-SNAPSHOT</version>
+        <relativePath>../mymall01-parent/pom.xml</relativePath>
     </parent>
     <groupId>indi.tom.mymall01</groupId>
     <artifactId>mymall01-user-manage</artifactId>
@@ -21,7 +19,10 @@
     </properties>
 
     <dependencies>
-        <dependency>
+        <!--他需要的通用mapper包，starter-web,分别在bean,和util-common项目中包含。
+    其他的mysql,jdbc相关的包在util-service中包含，starter-parent包含在parent项目中
+    需要引入的dubbo相关的三个包，包含在util-common中，因为不管是service还是web，都要用到-->
+        <!--<dependency>
             <groupId>tk.mybatis</groupId>
             <artifactId>mapper-spring-boot-starter</artifactId>
             <version>1.2.3</version>
@@ -66,6 +67,21 @@
                     <artifactId>junit-vintage-engine</artifactId>
                 </exclusion>
             </exclusions>
+        </dependency>-->
+        <dependency>
+            <artifactId>mymall01-util-common</artifactId>
+            <groupId>indi.tom.mymall01</groupId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <artifactId>mymall01-util-service</artifactId>
+            <groupId>indi.tom.mymall01</groupId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <artifactId>mymall01-interface</artifactId>
+            <groupId>indi.tom.mymall01</groupId>
+            <version>1.0-SNAPSHOT</version>
         </dependency>
     </dependencies>
 

@@ -1,9 +1,9 @@
 package indi.tom.mymall01.user.controller;
 
-import indi.tom.mymall01.user.bean.UserInfo;
-import indi.tom.mymall01.user.service.UserService;
+
+import indi.tom.mymall01.bean.UserInfo;
+import indi.tom.mymall01.interfaces.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;

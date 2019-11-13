@@ -1,10 +1,13 @@
 package indi.tom.mymall01.user.service.impl;
 
-import indi.tom.mymall01.user.bean.UserInfo;
+
+import com.alibaba.dubbo.config.annotation.Service;
+import indi.tom.mymall01.bean.UserInfo;
+import indi.tom.mymall01.interfaces.UserService;
 import indi.tom.mymall01.user.mapper.UserMapper;
-import indi.tom.mymall01.user.service.UserService;
+
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+
 import tk.mybatis.mapper.entity.Example;
 
 import java.util.List;
@@ -27,7 +30,9 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public UserInfo getUserById(String id) {
-        UserInfo userInfo = userMapper.selectByPrimaryKey(id);
+        UserInfo userInfo;
+
+        userInfo = userMapper.selectByPrimaryKey(id);
         return userInfo;
     }
 
@@ -54,4 +59,6 @@ public class UserServiceImpl implements UserService {
     public void delUser(UserInfo userInfo) {
         userMapper.deleteByPrimaryKey(userInfo.getId());
     }
+
+
 }

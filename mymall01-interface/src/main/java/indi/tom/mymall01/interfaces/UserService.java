@@ -1,6 +1,7 @@
-package indi.tom.mymall01.user.service;
+package indi.tom.mymall01.interfaces;
 
-import indi.tom.mymall01.user.bean.UserInfo;
+
+import indi.tom.mymall01.bean.UserInfo;
 
 import java.util.List;
 
