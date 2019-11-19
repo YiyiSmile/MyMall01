@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/MyMall01.iml" filepath="$PROJECT_DIR$/.idea/MyMall01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mymall01-backmanage-service/mymall01-backmanage-service.iml" filepath="$PROJECT_DIR$/mymall01-backmanage-service/mymall01-backmanage-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mymall01-backmanage-web/mymall01-backmanage-web.iml" filepath="$PROJECT_DIR$/mymall01-backmanage-web/mymall01-backmanage-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mymall01-bean/mymall01-bean.iml" filepath="$PROJECT_DIR$/mymall01-bean/mymall01-bean.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mymall01-interface/mymall01-interface.iml" filepath="$PROJECT_DIR$/mymall01-interface/mymall01-interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mymall01-order-web/mymall01-order-web.iml" filepath="$PROJECT_DIR$/mymall01-order-web/mymall01-order-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mymall01-parent/mymall01-parent.iml" filepath="$PROJECT_DIR$/mymall01-parent/mymall01-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mymall01-user-manage/mymall01-user-manage.iml" filepath="$PROJECT_DIR$/mymall01-user-manage/mymall01-user-manage.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mymall01-util-common/mymall01-util-common.iml" filepath="$PROJECT_DIR$/mymall01-util-common/mymall01-util-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mymall01-util-service/mymall01-util-service.iml" filepath="$PROJECT_DIR$/mymall01-util-service/mymall01-util-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mymall01-util-web/mymall01-util-web.iml" filepath="$PROJECT_DIR$/mymall01-util-web/mymall01-util-web.iml" />
+    </modules>
+  </component>
+</project>

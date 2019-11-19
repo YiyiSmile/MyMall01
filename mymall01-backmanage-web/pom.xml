@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <artifactId>mymall01-parent</artifactId>
+        <groupId>indi.tom.mymall01</groupId>
+        <version>1.0-SNAPSHOT</version>
+        <relativePath>../mymall01-parent/pom.xml</relativePath>
+    </parent>
+    <groupId>indi.tom.mymall01</groupId>
+    <artifactId>mymall01-backmanage-web</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>mymall01-backmanage-web</name>
+    <description>Demo project for Spring Boot</description>
+
+    <properties>
+        <java.version>1.8</java.version>
+    </properties>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+        <dependency>
+            <artifactId>mymall01-util-web</artifactId>
+            <groupId>indi.tom.mymall01</groupId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <artifactId>mymall01-interface</artifactId>
+            <groupId>indi.tom.mymall01</groupId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>org.csource</groupId>
+            <artifactId>fastdfs-client-java</artifactId>
+            <version>1.27-SNAPSHOT</version>
+        </dependency>
+        <!--如果放在最前边，会导致如下错误-->
+<!--        Detected both log4j-over-slf4j.jar AND slf4j-log4j12.jar on the class path, preempting StackOverflowError.-->
+<!--        The purpose of slf4j-log4j12 module is to delegate or redirect calls made to an SLF4J logger to log4j. The purpose of the log4j-over-slf4j module is to redirect calls made to a log4j logger to SLF4J. If SLF4J is bound withslf4j-log4j12.jar and log4j-over-slf4j.jar is also present on the class path, a StackOverflowError will inevitably occur immediately after the first invocation of an SLF4J or a log4j logger.-->
+
+<!--        Here is how the exception might look like:-->
+
+<!--        Exception in thread "main" java.lang.StackOverflowError-->
+<!--        at java.util.Hashtable.containsKey(Hashtable.java:306)-->
+<!--        at org.apache.log4j.Log4jLoggerFactory.getLogger(Log4jLoggerFactory.java:36)-->
+<!--        at org.apache.log4j.LogManager.getLogger(LogManager.java:39)-->
+<!--        at org.slf4j.impl.Log4jLoggerFactory.getLogger(Log4jLoggerFactory.java:73)-->
+<!--        at org.slf4j.LoggerFactory.getLogger(LoggerFactory.java:249)-->
+<!--        at org.apache.log4j.Category.<init>(Category.java:53)-->
+<!--        at org.apache.log4j.Logger..<init>(Logger.java:35)-->
+<!--        at org.apache.log4j.Log4jLoggerFactory.getLogger(Log4jLoggerFactory.java:39)-->
+<!--        at org.apache.log4j.LogManager.getLogger(LogManager.java:39)-->
+<!--        at org.slf4j.impl.Log4jLoggerFactory.getLogger(Log4jLoggerFactory.java:73)-->
+<!--        at org.slf4j.LoggerFactory.getLogger(LoggerFactory.java:249)-->
+<!--        at org.apache.log4j.Category..<init>(Category.java:53)-->
+<!--        at org.apache.log4j.Logger..<init>(Logger.java:35)-->
+<!--        at org.apache.log4j.Log4jLoggerFactory.getLogger(Log4jLoggerFactory.java:39)-->
+<!--        at org.apache.log4j.LogManager.getLogger(LogManager.java:39)-->
+<!--        subsequent lines omitted...-->
+<!--        SINCE 1.5.11 SLF4J software preempts the inevitable stack overflow error by throwing an exception with details about the actual cause of the problem. This is deemed to be better than leaving the user wondering about the reasons of the StackOverflowError.-->
+
+<!--        For more background on this topic see Bridging legacy APIs.-->
+        <dependency>
+            <groupId>org.csource</groupId>
+            <artifactId>fastdfs-client-java</artifactId>
+            <version>1.27-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

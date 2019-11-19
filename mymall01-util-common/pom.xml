@@ -15,6 +15,13 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
+<!--            <scope>test</scope>-->
+<!--            <exclusions>-->
+<!--                <exclusion>-->
+<!--                    <groupId>org.junit.vintage</groupId>-->
+<!--                    <artifactId>junit-vintage-engine</artifactId>-->
+<!--                </exclusion>-->
+<!--            </exclusions>-->
         </dependency>
        <!-- 不管是web(controller)还是service，都是跑在tomcat上的started-web就是提供web 容器
         这样web和controller依赖了这个包，就不需要再单独引入starter-web了。-->
