@@ -7,6 +7,7 @@
       <module fileurl="file://$PROJECT_DIR$/mymall01-backmanage-web/mymall01-backmanage-web.iml" filepath="$PROJECT_DIR$/mymall01-backmanage-web/mymall01-backmanage-web.iml" />
       <module fileurl="file://$PROJECT_DIR$/mymall01-bean/mymall01-bean.iml" filepath="$PROJECT_DIR$/mymall01-bean/mymall01-bean.iml" />
       <module fileurl="file://$PROJECT_DIR$/mymall01-interface/mymall01-interface.iml" filepath="$PROJECT_DIR$/mymall01-interface/mymall01-interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mymall01-item-web/mymall01-item-web.iml" filepath="$PROJECT_DIR$/mymall01-item-web/mymall01-item-web.iml" />
       <module fileurl="file://$PROJECT_DIR$/mymall01-order-web/mymall01-order-web.iml" filepath="$PROJECT_DIR$/mymall01-order-web/mymall01-order-web.iml" />
       <module fileurl="file://$PROJECT_DIR$/mymall01-parent/mymall01-parent.iml" filepath="$PROJECT_DIR$/mymall01-parent/mymall01-parent.iml" />
       <module fileurl="file://$PROJECT_DIR$/mymall01-user-manage/mymall01-user-manage.iml" filepath="$PROJECT_DIR$/mymall01-user-manage/mymall01-user-manage.iml" />

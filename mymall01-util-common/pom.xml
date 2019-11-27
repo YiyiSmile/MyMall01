@@ -25,6 +25,8 @@
         </dependency>
        <!-- 不管是web(controller)还是service，都是跑在tomcat上的started-web就是提供web 容器
         这样web和controller依赖了这个包，就不需要再单独引入starter-web了。-->
+
+        <!--spring-boot-starter-web这个包依赖于spring-boot-starter，所以也不需要单独引入spring-boot-starter-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>

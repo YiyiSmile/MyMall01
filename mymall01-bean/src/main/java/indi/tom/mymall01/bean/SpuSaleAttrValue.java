@@ -3,10 +3,7 @@ package indi.tom.mymall01.bean;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.io.Serializable;
 
 /**
@@ -28,4 +25,8 @@ public class SpuSaleAttrValue implements Serializable {
     private Integer saleAttrId;
     @Column
     private String saleAttrValueName;
+
+    @Transient
+    String isChecked;
+
 }

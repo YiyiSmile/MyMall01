@@ -19,11 +19,12 @@
     </properties>
 
     <dependencies>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter</artifactId>
-        </dependency>
+        <!--spring-boot-starter-web这个包位于mymall01-util-common下，
+        spring-boot-starter-web依赖于spring-boot-starter，所以不需要单独引入-->
+<!--        <dependency>-->
+<!--        <groupId>org.springframework.boot</groupId>-->
+<!--        <artifactId>spring-boot-starter</artifactId>-->
+<!--    </dependency>-->
         <dependency>
             <artifactId>mymall01-util-web</artifactId>
             <groupId>indi.tom.mymall01</groupId>

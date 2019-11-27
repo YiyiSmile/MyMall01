@@ -4,6 +4,7 @@ import com.alibaba.dubbo.config.annotation.Reference;
 import indi.tom.mymall01.bean.BaseSaleAttr;
 import indi.tom.mymall01.bean.SpuImage;
 import indi.tom.mymall01.bean.SpuInfo;
+import indi.tom.mymall01.bean.SpuSaleAttr;
 import indi.tom.mymall01.interfaces.SpuService;
 
 import org.springframework.web.bind.annotation.GetMapping;
@@ -39,5 +40,12 @@ public class SpuController {
     @GetMapping("spuImageList")
     public List<SpuImage> getSpuImageList(String spuId){
         return spuService.getSpuImageList(spuId);
+    }
+
+    //根据spu id,查询spu销售属性列表
+    @GetMapping("spuSaleAttrList")
+    public List<SpuSaleAttr> getSpuSaleAttrListBySpuId(String spuId){
+        List<SpuSaleAttr> spuSaleAttrListBySpuId = spuService.getSpuSaleAttrListBySpuId(spuId);
+        return spuSaleAttrListBySpuId;
     }
 }

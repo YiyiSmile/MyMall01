@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper SYSTEM "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="indi.tom.mymall01.backmanage.mapper.BaseAttrMapper">
+    <select id="indi.tom.mymall01.backmanage.mapper.BaseAttrMapper.getBaseAttrByCatalog3Id"
+            resultMap="baseAttrInfoList">
+        SELECT info.id, attr_name, catalog3_id, val.id attr_value_id, value_name
+        FROM `base_attr_info` info INNER JOIN `base_attr_value` val
+        ON info.id = val.attr_id
+        WHERE catalog3_id=#{catalog3Id}
+    </select>
+    <resultMap id="baseAttrInfoList" type="indi.tom.mymall01.bean.BaseAttrInfo">
+        <id column="id" property="id"/>
+        <result column="attr_name" property="attrName"/>
+        <result column="catalog3_id" property="catalog3Id"/>
+        <collection property="list" ofType="indi.tom.mymall01.bean.BaseAttrValue">
+            <id column="attr_value_id" property="id"></id>
+            <result column="value_name" property="valueName"/>
+            <result column="id" property="attrId"/>
+        </collection>
+    </resultMap>
+</mapper>

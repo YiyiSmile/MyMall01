@@ -2,18 +2,20 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="mymall01-util-common" />
+        <module name="mymall01-item-web" />
         <module name="mymall01-backmanage-web" />
-        <module name="mymall01-util-web" />
         <module name="mymall01-util-service" />
         <module name="mymall01-user-manage" />
         <module name="mymall01-order-web" />
         <module name="mymall01-bean" />
         <module name="mymall01-interface" />
+        <module name="mymall01-util-web" />
         <module name="mymall01-backmanage-service" />
       </profile>
     </annotationProcessing>
@@ -24,6 +26,7 @@
       <module name="mymall01-backmanage-web" target="1.8" />
       <module name="mymall01-bean" target="1.8" />
       <module name="mymall01-interface" target="1.8" />
+      <module name="mymall01-item-web" target="1.8" />
       <module name="mymall01-order-web" target="1.8" />
       <module name="mymall01-parent" target="1.8" />
       <module name="mymall01-user-manage" target="1.8" />
@@ -31,6 +34,7 @@
       <module name="mymall01-util-service" target="1.8" />
       <module name="mymall01-util-web" target="1.8" />
       <module name="mymall01utilweb" target="1.8" />
+      <module name="test01" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -38,8 +42,10 @@
       <module name="demo" options="-parameters" />
       <module name="mymall01-backmanage-service" options="" />
       <module name="mymall01-backmanage-web" options="" />
+      <module name="mymall01-item-web" options="" />
       <module name="mymall01-order-web" options="" />
       <module name="mymall01-user-manage" options="" />
+      <module name="test01" options="-parameters" />
     </option>
   </component>
 </project>

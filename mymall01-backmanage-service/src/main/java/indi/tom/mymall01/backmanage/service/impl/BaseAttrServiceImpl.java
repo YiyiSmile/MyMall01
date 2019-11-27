@@ -25,7 +25,7 @@ public class BaseAttrServiceImpl implements BaseAttrService {
     BaseAttrValueMapper baseAttrValueMapper;
     @Override
     public List<BaseAttrInfo> getBaseAttrByCatalog3Id(String catalog3Id) {
-        Example example = new Example(BaseAttrInfo.class);
+/*        Example example = new Example(BaseAttrInfo.class);
         example.createCriteria().andEqualTo("catalog3Id", Integer.parseInt(catalog3Id));
         List<BaseAttrInfo> baseAttrInfos = baseAttrMapper.selectByExample(example);
         //获取平台属性值
@@ -40,7 +40,12 @@ public class BaseAttrServiceImpl implements BaseAttrService {
             List<BaseAttrValue> list = baseAttrValueMapper.select(baseAttrValue);
             baseAttrInfo.setList(list);
         }
-        return baseAttrInfos;
+        return baseAttrInfos;*/
+
+        //自定义sql语句来查询
+        List<BaseAttrInfo> baseAttrInfoList = baseAttrMapper.getBaseAttrByCatalog3Id(catalog3Id);
+        return baseAttrInfoList;
+
     }
 
     @Override

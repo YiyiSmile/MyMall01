@@ -14,6 +14,8 @@
         <option value="$PROJECT_DIR$/mymall01-backmanage-controller/pom.xml" />
         <option value="$PROJECT_DIR$/mymall01-backmanage-service/pom.xml" />
         <option value="$PROJECT_DIR$/mymall01-backmanage-web/pom.xml" />
+        <option value="$PROJECT_DIR$/mymall-1-item-web/pom.xml" />
+        <option value="$PROJECT_DIR$/mymall01-item-web/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

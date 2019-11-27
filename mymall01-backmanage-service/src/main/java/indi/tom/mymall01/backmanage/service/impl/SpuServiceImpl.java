@@ -66,4 +66,30 @@ public class SpuServiceImpl implements SpuService {
         spuImage.setSpuId(Integer.parseInt(spuId));
         return spuImageMapper.select(spuImage);
     }
+
+    @Override
+    public List<SpuSaleAttr> getSpuSaleAttrListBySpuId(String spuId) {
+/*        SpuSaleAttr spuSaleAttr = new SpuSaleAttr();
+        spuSaleAttr.setSpuId(Integer.parseInt(spuId));
+        List<SpuSaleAttr> spuSaleAttrList = spuSaleAttrMapper.select(spuSaleAttr);
+        //这种循环语句中执行sql不好，如果循环次数多，导致频繁调用sql,要改成联合查询，用一次sql，查询获取所有结果。
+        for (SpuSaleAttr saleAttr : spuSaleAttrList) {
+            SpuSaleAttrValue spuSaleAttrValue = new SpuSaleAttrValue();
+            spuSaleAttrValue.setSaleAttrId(saleAttr.getSaleAttrId());
+            spuSaleAttrValue.setSpuId(Integer.parseInt(spuId));
+            List<SpuSaleAttrValue> spuSaleAttrValueList = spuSaleAttrValueMapper.select(spuSaleAttrValue);
+            saleAttr.setSpuSaleAttrValueList(spuSaleAttrValueList);
+        }
+        return spuSaleAttrList;*/
+
+        //使用联合查询，减少查询次数
+        List<SpuSaleAttr> spuSaleAttrList = spuSaleAttrMapper.getSpuSaleAttrListBySpuId(spuId);
+        return spuSaleAttrList;
+    }
+
+    @Override
+    public List<SpuSaleAttr> getSpuSaleAttrListCheckSku(String skuId, String spuId) {
+        List<SpuSaleAttr> spuSaleAttrList = spuSaleAttrMapper.getSpuSaleAttrListBySpuIdCheckSku(skuId, spuId);
+        return spuSaleAttrList;
+    }
 }

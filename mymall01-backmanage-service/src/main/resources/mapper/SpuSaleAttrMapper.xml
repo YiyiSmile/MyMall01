@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper SYSTEM "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="indi.tom.mymall01.backmanage.mapper.SpuSaleAttrMapper">
+    <select id="indi.tom.mymall01.backmanage.mapper.SpuSaleAttrMapper.getSpuSaleAttrListBySpuId" resultMap="spuSaleAttrValueList">
+        SELECT a.id, a.spu_id,a.sale_attr_id, a.sale_attr_name, b.id sale_attr_value_id, b.sale_attr_value_name
+        FROM `spu_sale_attr` a INNER JOIN `spu_sale_attr_value` b
+        ON a.spu_id = b.spu_id  AND a.sale_attr_id = b.sale_attr_id
+        WHERE a.spu_id = #{spuId};
+    </select>
+    <resultMap id="spuSaleAttrValueList" type="indi.tom.mymall01.bean.SpuSaleAttr">
+        <id column="id" property="id"></id>
+        <result column="spu_id" property="spuId"></result>
+        <result column="sale_attr_id" property="saleAttrId"></result>
+        <result column="sale_attr_name" property="saleAttrName"></result>
+
+        <collection property="spuSaleAttrValueList" ofType="indi.tom.mymall01.bean.SpuSaleAttrValue" autoMapping="true">
+            <id column="sale_attr_value_id" property="id"></id>
+            <result column="spu_id" property="spuId" />
+            <result column="sale_attr_id" property="saleAttrId"/>
+            <result column="sale_attr_value_name" property="saleAttrValueName" />
+        </collection>
+    </resultMap>
+    <select id="getSpuSaleAttrListBySpuIdCheckSku"  resultMap="spuSaleAttrValueList">
+       SELECT
+        sa.id, sa.spu_id ,sa.sale_attr_id ,sa.sale_attr_name,
+        sv.id sale_attr_value_id , sv.sale_attr_value_name,
+        IF( sav.sale_attr_value_id IS NULL ,'0','1') is_checked
+        FROM `spu_sale_attr`  sa JOIN `spu_sale_attr_value` sv  ON sa.sale_attr_id =sv.sale_attr_id  AND sa.spu_id=sv.spu_id
+        LEFT JOIN sku_sale_attr_value  sav ON sv.id=sav.sale_attr_value_id AND sav.sku_id=#{skuId}
+        WHERE sa.spu_id =#{spuId}
+
+   </select>
+</mapper>
