@@ -14,6 +14,8 @@ import java.util.Map;
 public interface SkuService {
     String saveSku(SkuInfo skuInfo);
     String addImage(SkuImage skuImage);
-    SkuInfo getSkuInfoById(String skuId);
+    SkuInfo getSkuInfoByIdDB(String skuId);
     Map getSkuValueIdsMap(String spuId);
+    SkuInfo getSkuInfoByIdRedis(String skuId) throws Exception;
+    SkuInfo getSkuInfoById(String skuId) throws Exception;
 }

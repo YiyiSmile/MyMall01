@@ -31,7 +31,12 @@ public class SkuController {
     SpuService spuService;
     @GetMapping("/{skuId}.html")
     public String getSkuInfoById(@PathVariable("skuId") String skuId, HttpServletRequest request){
-        SkuInfo skuInfo = skuService.getSkuInfoById(skuId);
+        SkuInfo skuInfo = null;
+        try {
+            skuInfo = skuService.getSkuInfoById(skuId);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         request.setAttribute("skuInfo", skuInfo);
 
         //获取spu销售属性以及属性值
