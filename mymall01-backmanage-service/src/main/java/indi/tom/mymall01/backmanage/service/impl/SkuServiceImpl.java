@@ -197,7 +197,7 @@ public class SkuServiceImpl implements SkuService {
             System.out.println(Thread.currentThread() + "没有命中缓存");
             //获取锁
             Config config = new Config();
-            config.useSingleServer().setAddress("redis://celvpvm16459.us.oracle.com:6379");
+            config.useSingleServer().setAddress("redis://redis.mymall01.com:6379");
             RedissonClient redissonClient = Redisson.create(config);
             RLock lock = redissonClient.getLock(skuLockKey);
 //            lock.lock(10, TimeUnit.SECONDS);

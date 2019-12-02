@@ -2,7 +2,7 @@ search模块反向代理设置：
 
 
     upstream search{
-        server 10.191.26.195:8084;
+        server IP:8084;
 
     }
     server {
