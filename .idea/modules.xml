@@ -10,6 +10,8 @@
       <module fileurl="file://$PROJECT_DIR$/mymall01-item-web/mymall01-item-web.iml" filepath="$PROJECT_DIR$/mymall01-item-web/mymall01-item-web.iml" />
       <module fileurl="file://$PROJECT_DIR$/mymall01-order-web/mymall01-order-web.iml" filepath="$PROJECT_DIR$/mymall01-order-web/mymall01-order-web.iml" />
       <module fileurl="file://$PROJECT_DIR$/mymall01-parent/mymall01-parent.iml" filepath="$PROJECT_DIR$/mymall01-parent/mymall01-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mymall01-search-service/mymall01-search-service.iml" filepath="$PROJECT_DIR$/mymall01-search-service/mymall01-search-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mymall01-search-web/mymall01-search-web.iml" filepath="$PROJECT_DIR$/mymall01-search-web/mymall01-search-web.iml" />
       <module fileurl="file://$PROJECT_DIR$/mymall01-user-manage/mymall01-user-manage.iml" filepath="$PROJECT_DIR$/mymall01-user-manage/mymall01-user-manage.iml" />
       <module fileurl="file://$PROJECT_DIR$/mymall01-util-common/mymall01-util-common.iml" filepath="$PROJECT_DIR$/mymall01-util-common/mymall01-util-common.iml" />
       <module fileurl="file://$PROJECT_DIR$/mymall01-util-service/mymall01-util-service.iml" filepath="$PROJECT_DIR$/mymall01-util-service/mymall01-util-service.iml" />

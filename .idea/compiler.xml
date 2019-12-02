@@ -10,6 +10,7 @@
         <module name="mymall01-util-common" />
         <module name="mymall01-item-web" />
         <module name="mymall01-backmanage-web" />
+        <module name="mymall01-search-web" />
         <module name="mymall01-util-service" />
         <module name="mymall01-user-manage" />
         <module name="mymall01-order-web" />
@@ -17,6 +18,7 @@
         <module name="mymall01-interface" />
         <module name="mymall01-util-web" />
         <module name="mymall01-backmanage-service" />
+        <module name="mymall01-search-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -29,6 +31,8 @@
       <module name="mymall01-item-web" target="1.8" />
       <module name="mymall01-order-web" target="1.8" />
       <module name="mymall01-parent" target="1.8" />
+      <module name="mymall01-search-service" target="1.8" />
+      <module name="mymall01-search-web" target="1.8" />
       <module name="mymall01-user-manage" target="1.8" />
       <module name="mymall01-util-common" target="1.8" />
       <module name="mymall01-util-service" target="1.8" />
@@ -44,6 +48,8 @@
       <module name="mymall01-backmanage-web" options="" />
       <module name="mymall01-item-web" options="" />
       <module name="mymall01-order-web" options="" />
+      <module name="mymall01-search-service" options="" />
+      <module name="mymall01-search-web" options="" />
       <module name="mymall01-user-manage" options="" />
       <module name="test01" options="-parameters" />
     </option>

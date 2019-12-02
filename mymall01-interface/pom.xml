@@ -6,7 +6,7 @@
         <artifactId>mymall01-parent</artifactId>
         <groupId>indi.tom.mymall01</groupId>
         <version>1.0-SNAPSHOT</version>
-        <relativePath>../mymall01parent/pom.xml</relativePath>
+        <relativePath>../mymall01-parent/pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <dependencies>

@@ -1,0 +1,15 @@
+search模块反向代理设置：
+
+
+    upstream search{
+        server 10.191.26.195:8084;
+
+    }
+    server {
+       listen 80;
+       server_name search.mymall01.com;
+
+       location /{
+             proxy_pass http://search;
+       }
+    }

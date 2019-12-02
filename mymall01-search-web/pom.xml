@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <artifactId>mymall01-parent</artifactId>
+        <groupId>indi.tom.mymall01</groupId>
+        <version>1.0-SNAPSHOT</version>
+        <relativePath>../mymall01-parent/pom.xml</relativePath>
+    </parent>
+    <groupId>indi.tom.mymall01</groupId>
+    <artifactId>mymall01-search-web</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>search-web</name>
+    <description>Demo project for Spring Boot</description>
+
+    <properties>
+        <java.version>1.8</java.version>
+    </properties>
+
+    <dependencies>
+        <!--spring-boot-starter-web这个包位于mymall01-util-common下，
+            spring-boot-starter-web依赖于spring-boot-starter，所以不需要单独引入-->
+        <!--<dependency>
+
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>-->
+
+        <dependency>
+            <artifactId>mymall01-util-web</artifactId>
+            <groupId>indi.tom.mymall01</groupId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <artifactId>mymall01-interface</artifactId>
+            <groupId>indi.tom.mymall01</groupId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.junit.vintage</groupId>
+                    <artifactId>junit-vintage-engine</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

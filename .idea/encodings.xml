@@ -8,11 +8,12 @@
     <file url="file://$PROJECT_DIR$/mymall01-item-web" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mymall01-order-web" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mymall01-parent" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mymall01-search-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mymall01-search-web" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mymall01-user-manage" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mymall01-util-common" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mymall01-util-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mymall01-util-web" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/test01" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../mymall01-util-web" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
   </component>

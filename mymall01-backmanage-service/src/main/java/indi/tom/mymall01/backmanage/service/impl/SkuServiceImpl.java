@@ -92,11 +92,7 @@ public class SkuServiceImpl implements SkuService {
     public SkuInfo getSkuInfoByIdDB(String skuId) {
 
         System.out.println(Thread.currentThread() + "查询数据库！");
-        try {
-            Thread.sleep(3000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+
 
         Integer skuId1 = Integer.parseInt(skuId);
 

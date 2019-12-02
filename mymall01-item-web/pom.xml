@@ -9,9 +9,9 @@
         <relativePath>../mymall01-parent/pom.xml</relativePath>
     </parent>
     <groupId>indi.tom.mymall01</groupId>
-    <artifactId>mymall-1-item-web</artifactId>
+    <artifactId>mymall01-item-web</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>mymall-1-item-web</name>
+    <name>mymall01-item-web</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
