@@ -6,6 +6,7 @@ import indi.tom.mymall01.backmanage.mapper.BaseAttrValueMapper;
 import indi.tom.mymall01.bean.BaseAttrInfo;
 import indi.tom.mymall01.bean.BaseAttrValue;
 import indi.tom.mymall01.interfaces.BaseAttrService;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import tk.mybatis.mapper.entity.Example;
 
@@ -24,7 +25,7 @@ public class BaseAttrServiceImpl implements BaseAttrService {
     @Autowired
     BaseAttrValueMapper baseAttrValueMapper;
     @Override
-    public List<BaseAttrInfo> getBaseAttrByCatalog3Id(String catalog3Id) {
+    public List<BaseAttrInfo> getBaseAttrListByCatalog3Id(String catalog3Id) {
 /*        Example example = new Example(BaseAttrInfo.class);
         example.createCriteria().andEqualTo("catalog3Id", Integer.parseInt(catalog3Id));
         List<BaseAttrInfo> baseAttrInfos = baseAttrMapper.selectByExample(example);
@@ -62,5 +63,12 @@ public class BaseAttrServiceImpl implements BaseAttrService {
     @Override
     public void modifyBaseAttr(BaseAttrInfo baseAttrInfo) {
 
+    }
+
+    @Override
+    public List<BaseAttrInfo> getBaseAttrListByBaseAttrValueIds(List<String> baseAttrValueIds) {
+        String baseAttrValueIds_string = StringUtils.join(baseAttrValueIds.toArray(), ",");
+        List<BaseAttrInfo> baseAttrInfoList = baseAttrMapper.getBaseAttrByBaseAttrValueIds(baseAttrValueIds_string );
+        return baseAttrInfoList;
     }
 }

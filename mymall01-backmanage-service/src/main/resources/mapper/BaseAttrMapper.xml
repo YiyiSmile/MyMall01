@@ -8,6 +8,14 @@
         ON info.id = val.attr_id
         WHERE catalog3_id=#{catalog3Id}
     </select>
+    <!--根据传入的平台属性值id列表，查询平台属性和属性值-->
+    <select id="getBaseAttrByBaseAttrValueIds" resultMap="baseAttrInfoList">
+        SELECT info.id, attr_name, catalog3_id, val.id attr_value_id, value_name
+        FROM `base_attr_info` info INNER JOIN `base_attr_value` val
+        ON info.id = val.attr_id
+        WHERE catalog3_id = 1260 AND val.id IN (${baseAttrValueIds});
+    </select>
+
     <resultMap id="baseAttrInfoList" type="indi.tom.mymall01.bean.BaseAttrInfo">
         <id column="id" property="id"/>
         <result column="attr_name" property="attrName"/>

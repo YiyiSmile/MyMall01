@@ -18,6 +18,8 @@
         <option value="$PROJECT_DIR$/mymall01-item-web/pom.xml" />
         <option value="$PROJECT_DIR$/mymall01-search-service/pom.xml" />
         <option value="$PROJECT_DIR$/search-web/pom.xml" />
+        <option value="$PROJECT_DIR$/mymall01-search-web/pom.xml" />
+        <option value="$PROJECT_DIR$/mymalll01-passport-web/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

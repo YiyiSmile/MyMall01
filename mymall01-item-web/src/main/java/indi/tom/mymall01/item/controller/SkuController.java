@@ -2,6 +2,7 @@ package indi.tom.mymall01.item.controller;
 
 import com.alibaba.dubbo.config.annotation.Reference;
 import com.alibaba.fastjson.JSON;
+import indi.tom.mymall01.annotation.LoginRequired;
 import indi.tom.mymall01.bean.SkuInfo;
 import indi.tom.mymall01.bean.SpuInfo;
 import indi.tom.mymall01.bean.SpuSaleAttr;
@@ -30,6 +31,7 @@ public class SkuController {
     @Reference
     SpuService spuService;
     @GetMapping("/{skuId}.html")
+    @LoginRequired
     public String getSkuInfoById(@PathVariable("skuId") String skuId, HttpServletRequest request){
         SkuInfo skuInfo = null;
         try {

@@ -21,5 +21,5 @@ public class SkuSearchParam implements Serializable {
 
     int pageNo=1;
 
-    int pageSize=20;
+    int pageSize=5;
 }

@@ -97,6 +97,10 @@ public class SkuSearchServiceImpl implements SkuSearchService {
         List<SearchResult.Hit<SkuSearchInfo, Void>> hits = searchResult.getHits(SkuSearchInfo.class);
         for (SearchResult.Hit<SkuSearchInfo, Void> hit : hits) {
             SkuSearchInfo skuSearchInfo = hit.source;
+            if(hit.highlight != null) {
+                String skuName = hit.highlight.get("skuName").get(0);
+                skuSearchInfo.setSkuName(skuName);
+            }
             skuSearchInfoList.add(skuSearchInfo);
         }
         skuSearchResult.setSkuSearchInfoList(skuSearchInfoList);

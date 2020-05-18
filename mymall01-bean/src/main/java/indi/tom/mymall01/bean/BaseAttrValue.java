@@ -3,10 +3,7 @@ package indi.tom.mymall01.bean;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.io.Serializable;
 
 /**
@@ -29,4 +26,6 @@ public class BaseAttrValue implements Serializable {
     private Integer attrId;
     @Column
     private boolean isEnabled;
+    @Transient
+    private String urlParam;
 }

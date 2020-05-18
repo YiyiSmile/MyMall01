@@ -19,6 +19,7 @@
         <module>../mymall01-util-common</module>
         <module>../mymall01-util-web</module>
         <module>../mymall01-util-service</module>
+<!--        <module>../mymall01-item-web</module>-->
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -149,12 +150,12 @@
 
         </dependencies>
     </dependencyManagement>
-    <dependencies>
+<!--    <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
             <scope>runtime</scope>
         </dependency>
-    </dependencies>
+    </dependencies>-->
 
 </project>

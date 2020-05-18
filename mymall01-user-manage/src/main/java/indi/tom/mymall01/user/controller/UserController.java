@@ -1,6 +1,7 @@
 package indi.tom.mymall01.user.controller;
 
 
+import com.alibaba.dubbo.config.annotation.Reference;
 import indi.tom.mymall01.bean.UserInfo;
 import indi.tom.mymall01.interfaces.UserService;
 import org.springframework.beans.factory.annotation.Autowired;

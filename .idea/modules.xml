@@ -16,6 +16,7 @@
       <module fileurl="file://$PROJECT_DIR$/mymall01-util-common/mymall01-util-common.iml" filepath="$PROJECT_DIR$/mymall01-util-common/mymall01-util-common.iml" />
       <module fileurl="file://$PROJECT_DIR$/mymall01-util-service/mymall01-util-service.iml" filepath="$PROJECT_DIR$/mymall01-util-service/mymall01-util-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/mymall01-util-web/mymall01-util-web.iml" filepath="$PROJECT_DIR$/mymall01-util-web/mymall01-util-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mymalll01-passport-web/mymalll01-passport-web.iml" filepath="$PROJECT_DIR$/mymalll01-passport-web/mymalll01-passport-web.iml" />
     </modules>
   </component>
 </project>
