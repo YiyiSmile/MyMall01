@@ -89,13 +89,14 @@ public class AuthInterceptor extends HandlerInterceptorAdapter {
              *   1.2.1.1 如果cookie中有，验证token是否有效
              *     1.2.1.1.1 如果有效，提取userID和nickName并放到request中
              *     1.2.1.1.2 如果无效，检查请求方法是否需要认证
-             *       1.2.1.1.2.1 如果需要验证，跳转到登录页面 返回false,请求方法不被执行。
+             *       1.2.1.1.2.1 如果需要验证，（autoRedirect有什么意义？）
+             *         1.2.1.1.2.1 如果autoRedirect 属性值是true, 转入登录页面，返回false，请求方法不被执行
+             *         1.2.1.1.2.2 如果autoRedirect 属性值是false, 提取nickName，写入request中， 返回true.
              *       1.2.1.1.2.2 如果不需要验证，提取NickName并放入请求中，返回true,请求方法被调用
              *   1.2.1.2 如果cookie中没有token, 检查请求方法是否需要登录
-             *          1.2.1.2.1 如果不需要登录 提取nickName，写入request中， return ture，放行
-             *          1.2.1.2.2 如果需要登录，
-             *             1.2.1.2.2.1 如果autoRedirect 属性值是true, 转入登录页面，返回false，请求方法不被执行(这种情况不太可能，如果有发生，多半是有人恶意伪造token)
-             *             1.2.1.2.2.2 如果autoRedirect 属性值是false, 提取nickName，写入request中， 返回true.
+             *          1.2.1.2.1 如果不需要登录 return ture，放行
+             *          1.2.1.2.2 如果需要登录，转入登录页面
+             *
              */
             token = CookieUtil.getCookieValue(request, "token", false);
             if(null != token){
@@ -119,6 +120,7 @@ public class AuthInterceptor extends HandlerInterceptorAdapter {
     }
 
     private Map<String, Object> getUserMapFromToken(String token) {
+        if(token == null) return null;
         String userBase64 = StringUtils.substringBetween(token, ".");
         Base64UrlCodec base64UrlCodec = new Base64UrlCodec();
         byte[] userBytes = base64UrlCodec.decode(userBase64);
@@ -130,6 +132,7 @@ public class AuthInterceptor extends HandlerInterceptorAdapter {
         return userMap;
     }
     private void setNickNameOfRequest(String token, HttpServletRequest request){
+        if(token == null) throw new IllegalArgumentException("token parameter can not be null");
         Map<String,Object> map = new HashMap<>();
         map = getUserMapFromToken(token);
         String nickName = (String)map.get("nickName");

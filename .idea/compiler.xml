@@ -15,12 +15,14 @@
         <module name="mymall01-util-web" />
         <module name="mymall01-util-common" />
         <module name="mymall01-order-web" />
+        <module name="mymall01-cart-service" />
         <module name="mymall01-passport-service" />
         <module name="mymall01-util-service" />
         <module name="mymalll01-passport-web" />
         <module name="mymall01-backmanage-service" />
         <module name="mymall01-user-manage" />
         <module name="mymall01-search-web" />
+        <module name="mymall01-cart-web" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -29,6 +31,8 @@
       <module name="mymall01-backmanage-service" target="1.8" />
       <module name="mymall01-backmanage-web" target="1.8" />
       <module name="mymall01-bean" target="1.8" />
+      <module name="mymall01-cart-service" target="1.8" />
+      <module name="mymall01-cart-web" target="1.8" />
       <module name="mymall01-interface" target="1.8" />
       <module name="mymall01-item-web" target="1.8" />
       <module name="mymall01-order-web" target="1.8" />
@@ -50,6 +54,8 @@
       <module name="demo" options="-parameters" />
       <module name="mymall01-backmanage-service" options="" />
       <module name="mymall01-backmanage-web" options="" />
+      <module name="mymall01-cart-service" options="" />
+      <module name="mymall01-cart-web" options="" />
       <module name="mymall01-item-web" options="" />
       <module name="mymall01-order-web" options="" />
       <module name="mymall01-passport-service" options="-parameters" />

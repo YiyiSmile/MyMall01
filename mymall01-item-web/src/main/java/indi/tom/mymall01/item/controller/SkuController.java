@@ -15,6 +15,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
 import java.beans.DesignMode;
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
 import java.util.List;
 import java.util.Map;
 
@@ -31,8 +33,8 @@ public class SkuController {
     @Reference
     SpuService spuService;
     @GetMapping("/{skuId}.html")
-    @LoginRequired
-    public String getSkuInfoById(@PathVariable("skuId") String skuId, HttpServletRequest request){
+//    @LoginRequired
+    public String getSkuInfoById(@PathVariable("skuId") String skuId, HttpServletRequest request) throws UnsupportedEncodingException {
         SkuInfo skuInfo = null;
         try {
             skuInfo = skuService.getSkuInfoById(skuId);
@@ -53,6 +55,10 @@ public class SkuController {
         String valuesSkuJson = JSON.toJSONString(skuValueIdsMap);
         System.out.println(valuesSkuJson);
         request.setAttribute("valuesSkuJson",valuesSkuJson);
+
+
+        String originUrl= URLEncoder.encode(request.getRequestURL().toString(), "UTF-8");
+        request.setAttribute("originUrl", originUrl);
 
 
         return "item";

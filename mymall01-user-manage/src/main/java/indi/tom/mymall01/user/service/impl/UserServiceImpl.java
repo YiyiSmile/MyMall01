@@ -107,6 +107,7 @@ public class UserServiceImpl implements UserService {
             jedis.expire(userInfoKeyPrefix + userId + userInfoKeySuffix, userInfokeyTimeout);
             return true;
         }else{
+            //如果缓存中没有，查询数据库，并放入缓存。
             return false;
         }
 

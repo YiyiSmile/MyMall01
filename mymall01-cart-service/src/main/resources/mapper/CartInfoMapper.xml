@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper SYSTEM "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="indi.tom.mymall01.cartservice.mapper.CartInfoMapper">
+    <select id="indi.tom.mymall01.cartservice.mapper.CartInfoMapper.selectByUserId"  resultMap="cartMap">
+        SELECT c.id, c.user_id, c.sku_id, c.cart_price, c.sku_num, c.img_url, c.sku_num, c.sku_name, s.price sku_price
+        FROM cart_info c JOIN sku_info s
+        ON c.sku_id = s.id
+        WHERE c.user_id = #{userId};
+    </select>
+
+
+    <resultMap id="cartMap" type="indi.tom.mymall01.bean.CartInfo" autoMapping="true">
+
+    </resultMap>
+</mapper>
